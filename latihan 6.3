@@ -1,0 +1,17 @@
+def hitung_ips():
+    jumlah_mk = int(input("Masukkan jumlah mata kuliah: "))
+    total_sks = jumlah_mk * 3  # Diasumsikan setiap MK memiliki 3 SKS
+    total_nilai = 0
+    
+    for _ in range(jumlah_mk):
+        nilai = input("Masukkan nilai (A/B/C/D): ").upper()
+        if nilai == 'A': total_nilai += 4 * 3
+        elif nilai == 'B': total_nilai += 3 * 3
+        elif nilai == 'C': total_nilai += 2 * 3
+        elif nilai == 'D': total_nilai += 1 * 3
+        else: print("Nilai tidak valid!")
+    
+    ips = total_nilai / total_sks
+    print(f"IPS Anda: {ips:.2f}")
+
+hitung_ips()
